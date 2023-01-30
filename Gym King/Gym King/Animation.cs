@@ -40,12 +40,6 @@ namespace Gym_King
             }
             else if (state == PlayerState.Jump)
             {
-                /*Start = 45;
-                End = 47;
-                if (Current > 0) // TODO: Mozna budu muset odebrat cislo -1
-                {
-                    Current = 0;
-                }*/
                 Current = 45;
             }
             else

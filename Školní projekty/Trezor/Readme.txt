@@ -1,0 +1,1 @@
+Small project in which I practiced working with vault-like periphery using language C with microcontroller Atmega128.

@@ -71,7 +71,6 @@ namespace Gym_King
                 levelEditor.IsSet = false;
                 levelEditor.Ready = false;
                 levelEditor.Confirm = true;
-                //Reload();
             }
             oldKeyboard = keyboard;
             button.Update();
@@ -79,7 +78,6 @@ namespace Gym_King
 
         public void Reload()
         {
-            //levelManager = new LevelManager(1, spriteBatch, graphicsDevice);
             levelManager.Initialize();
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)

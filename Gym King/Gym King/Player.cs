@@ -15,7 +15,7 @@ namespace Gym_King
         float jumpForce = 0;
         float maxJumpForce = 10;
         float friction = 8;
-        public int Width { get; set; } = 64; //ZMEN TOTO TY KOKOT POKUD ZMENIS POSTAAVICKU
+        public int Width { get; set; } = 64;
         public int Height { get; set; } = 64;
 
         bool airborne = true;

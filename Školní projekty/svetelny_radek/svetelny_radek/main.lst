@@ -1,0 +1,588 @@
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	setup
+  18               	setup:
+  19               	.LFB7:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 8FEF      		ldi r24,lo8(-1)
+  25 0002 87BB      		out 55-32,r24
+  26               	.LM3:
+  27 0004 88BB      		out 56-32,r24
+  28               	.LM4:
+  29 0006 81BB      		out 49-32,r24
+  30               	.LM5:
+  31 0008 12BA      		out 50-32,__zero_reg__
+  32 000a 84EF      		ldi r24,lo8(500)
+  33 000c 91E0      		ldi r25,hi8(500)
+  34               	.LVL0:
+  35               	.LBB58:
+  36               	.LBB59:
+  37               	.LBB60:
+  38               	.LBB61:
+  39               	.LM6:
+  40 000e 20E7      		ldi r18,lo8(368)
+  41 0010 31E0      		ldi r19,hi8(368)
+  42               	.L2:
+  43 0012 F901      		movw r30,r18
+  44               	.LVL1:
+  45               	/* #APP */
+  46               	 ;  105 "c:/program files (x86)/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  47 0014 3197      		1: sbiw r30,1
+  48 0016 01F4      		brne 1b
+  49               	 ;  0 "" 2
+  50               	/* #NOAPP */
+  51               	.LBE61:
+  52               	.LBE60:
+  53               	.LM7:
+  54 0018 0197      		sbiw r24,1
+  55               	.LM8:
+  56 001a 01F4      		brne .L2
+  57               	/* epilogue start */
+  58               	.LBE59:
+  59               	.LBE58:
+  60               	.LM9:
+  61 001c 0895      		ret
+  62               	.LFE7:
+  64               	.global	pocitaniCasu
+  66               	pocitaniCasu:
+  67               	.LFB10:
+  68               	.LM10:
+  69               	/* prologue: function */
+  70               	/* frame size = 0 */
+  71               	.LM11:
+  72 001e 8091 0000 		lds r24,cisloRegistr6
+  73 0022 9091 0000 		lds r25,(cisloRegistr6)+1
+  74 0026 8930      		cpi r24,9
+  75 0028 9105      		cpc r25,__zero_reg__
+  76 002a 01F0      		breq .L6
+  77               	.LM12:
+  78 002c 0196      		adiw r24,1
+  79 002e 9093 0000 		sts (cisloRegistr6)+1,r25
+  80 0032 8093 0000 		sts cisloRegistr6,r24
+  81 0036 00C0      		rjmp .L7
+  82               	.L6:
+  83               	.LM13:
+  84 0038 8091 0000 		lds r24,cisloRegistr5
+  85 003c 9091 0000 		lds r25,(cisloRegistr5)+1
+  86 0040 0196      		adiw r24,1
+  87 0042 9093 0000 		sts (cisloRegistr5)+1,r25
+  88 0046 8093 0000 		sts cisloRegistr5,r24
+  89               	.LM14:
+  90 004a 1092 0000 		sts (cisloRegistr6)+1,__zero_reg__
+  91 004e 1092 0000 		sts cisloRegistr6,__zero_reg__
+  92               	.L7:
+  93               	.LM15:
+  94 0052 8091 0000 		lds r24,cisloRegistr5
+  95 0056 9091 0000 		lds r25,(cisloRegistr5)+1
+  96 005a 0697      		sbiw r24,6
+  97 005c 01F4      		brne .L8
+  98               	.LM16:
+  99 005e 1092 0000 		sts (cisloRegistr5)+1,__zero_reg__
+ 100 0062 1092 0000 		sts cisloRegistr5,__zero_reg__
+ 101               	.LM17:
+ 102 0066 1092 0000 		sts (cisloRegistr6)+1,__zero_reg__
+ 103 006a 1092 0000 		sts cisloRegistr6,__zero_reg__
+ 104               	.LM18:
+ 105 006e 8091 0000 		lds r24,cisloRegistr4
+ 106 0072 9091 0000 		lds r25,(cisloRegistr4)+1
+ 107 0076 0196      		adiw r24,1
+ 108 0078 9093 0000 		sts (cisloRegistr4)+1,r25
+ 109 007c 8093 0000 		sts cisloRegistr4,r24
+ 110               	.L8:
+ 111               	.LM19:
+ 112 0080 8091 0000 		lds r24,cisloRegistr4
+ 113 0084 9091 0000 		lds r25,(cisloRegistr4)+1
+ 114 0088 0A97      		sbiw r24,10
+ 115 008a 01F4      		brne .L9
+ 116               	.LM20:
+ 117 008c 1092 0000 		sts (cisloRegistr4)+1,__zero_reg__
+ 118 0090 1092 0000 		sts cisloRegistr4,__zero_reg__
+ 119               	.LM21:
+ 120 0094 8091 0000 		lds r24,cisloRegistr3
+ 121 0098 9091 0000 		lds r25,(cisloRegistr3)+1
+ 122 009c 0196      		adiw r24,1
+ 123 009e 9093 0000 		sts (cisloRegistr3)+1,r25
+ 124 00a2 8093 0000 		sts cisloRegistr3,r24
+ 125               	.L9:
+ 126               	.LM22:
+ 127 00a6 8091 0000 		lds r24,cisloRegistr3
+ 128 00aa 9091 0000 		lds r25,(cisloRegistr3)+1
+ 129 00ae 0697      		sbiw r24,6
+ 130 00b0 01F4      		brne .L10
+ 131               	.LM23:
+ 132 00b2 1092 0000 		sts (cisloRegistr3)+1,__zero_reg__
+ 133 00b6 1092 0000 		sts cisloRegistr3,__zero_reg__
+ 134               	.LM24:
+ 135 00ba 8091 0000 		lds r24,cisloRegistr2
+ 136 00be 9091 0000 		lds r25,(cisloRegistr2)+1
+ 137 00c2 0196      		adiw r24,1
+ 138 00c4 9093 0000 		sts (cisloRegistr2)+1,r25
+ 139 00c8 8093 0000 		sts cisloRegistr2,r24
+ 140               	.L10:
+ 141               	.LM25:
+ 142 00cc 8091 0000 		lds r24,cisloRegistr2
+ 143 00d0 9091 0000 		lds r25,(cisloRegistr2)+1
+ 144 00d4 0A97      		sbiw r24,10
+ 145 00d6 01F4      		brne .L11
+ 146               	.LM26:
+ 147 00d8 1092 0000 		sts (cisloRegistr2)+1,__zero_reg__
+ 148 00dc 1092 0000 		sts cisloRegistr2,__zero_reg__
+ 149               	.LM27:
+ 150 00e0 8091 0000 		lds r24,cisloRegistr1
+ 151 00e4 9091 0000 		lds r25,(cisloRegistr1)+1
+ 152 00e8 0196      		adiw r24,1
+ 153 00ea 9093 0000 		sts (cisloRegistr1)+1,r25
+ 154 00ee 8093 0000 		sts cisloRegistr1,r24
+ 155               	.L11:
+ 156               	.LM28:
+ 157 00f2 8091 0000 		lds r24,cisloRegistr1
+ 158 00f6 9091 0000 		lds r25,(cisloRegistr1)+1
+ 159 00fa 0297      		sbiw r24,2
+ 160 00fc 01F4      		brne .L13
+ 161 00fe 8091 0000 		lds r24,cisloRegistr2
+ 162 0102 9091 0000 		lds r25,(cisloRegistr2)+1
+ 163 0106 0497      		sbiw r24,4
+ 164 0108 01F4      		brne .L13
+ 165               	.LM29:
+ 166 010a 1092 0000 		sts (cisloRegistr1)+1,__zero_reg__
+ 167 010e 1092 0000 		sts cisloRegistr1,__zero_reg__
+ 168               	.LM30:
+ 169 0112 1092 0000 		sts (cisloRegistr2)+1,__zero_reg__
+ 170 0116 1092 0000 		sts cisloRegistr2,__zero_reg__
+ 171               	.L13:
+ 172 011a 0895      		ret
+ 173               	.LFE10:
+ 175               	.global	zapsaniDat
+ 177               	zapsaniDat:
+ 178               	.LFB8:
+ 179               	.LM31:
+ 180               	.LVL2:
+ 181 011c 1F93      		push r17
+ 182               	/* prologue: function */
+ 183               	/* frame size = 0 */
+ 184               	.LM32:
+ 185 011e 1FEF      		ldi r17,lo8(-1)
+ 186 0120 18BB      		out 56-32,r17
+ 187               	.LM33:
+ 188 0122 12BA      		out 50-32,__zero_reg__
+ 189               	.LM34:
+ 190 0124 FC01      		movw r30,r24
+ 191 0126 93E0      		ldi r25,3
+ 192 0128 EE0F      	1:	lsl r30
+ 193 012a FF1F      		rol r31
+ 194 012c 9A95      		dec r25
+ 195 012e 01F4      		brne 1b
+ 196 0130 E60F      		add r30,r22
+ 197 0132 F71F      		adc r31,r23
+ 198 0134 EE0F      		lsl r30
+ 199 0136 FF1F      		rol r31
+ 200               	.LVL3:
+ 201 0138 E050      		subi r30,lo8(-(cisla))
+ 202 013a F040      		sbci r31,hi8(-(cisla))
+ 203 013c 8081      		ld r24,Z
+ 204 013e 8095      		com r24
+ 205 0140 88BB      		out 56-32,r24
+ 206               	.LM35:
+ 207 0142 80E0      		ldi r24,lo8(0)
+ 208 0144 90E0      		ldi r25,hi8(0)
+ 209 0146 BA01      		movw r22,r20
+ 210               	.LVL4:
+ 211 0148 0E94 0000 		call setBit
+ 212               	.LVL5:
+ 213 014c 82BB      		out 50-32,r24
+ 214               	.LBB62:
+ 215               	.LBB63:
+ 216               	.LBB64:
+ 217               	.LBB65:
+ 218               	.LM36:
+ 219 014e 81E0      		ldi r24,lo8(1)
+ 220               	.LVL6:
+ 221               	/* #APP */
+ 222               	 ;  83 "c:/program files (x86)/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 223 0150 8A95      		1: dec r24
+ 224 0152 01F4      		brne 1b
+ 225               	 ;  0 "" 2
+ 226               	/* #NOAPP */
+ 227               	.LBE65:
+ 228               	.LBE64:
+ 229               	.LBE63:
+ 230               	.LBE62:
+ 231               	.LM37:
+ 232 0154 12BA      		out 50-32,__zero_reg__
+ 233               	.LM38:
+ 234 0156 18BB      		out 56-32,r17
+ 235               	/* epilogue start */
+ 236               	.LM39:
+ 237 0158 1F91      		pop r17
+ 238 015a 0895      		ret
+ 239               	.LFE8:
+ 241               	.global	vykresleniSloupce
+ 243               	vykresleniSloupce:
+ 244               	.LFB9:
+ 245               	.LM40:
+ 246               	.LVL7:
+ 247 015c FF92      		push r15
+ 248 015e 0F93      		push r16
+ 249 0160 1F93      		push r17
+ 250               	/* prologue: function */
+ 251               	/* frame size = 0 */
+ 252 0162 8C01      		movw r16,r24
+ 253               	.LM41:
+ 254 0164 8FEF      		ldi r24,lo8(-1)
+ 255               	.LVL8:
+ 256 0166 88BB      		out 56-32,r24
+ 257               	.LM42:
+ 258 0168 80E0      		ldi r24,lo8(0)
+ 259 016a 90E0      		ldi r25,hi8(0)
+ 260 016c 67E0      		ldi r22,lo8(7)
+ 261 016e 70E0      		ldi r23,hi8(7)
+ 262 0170 0E94 0000 		call setBit
+ 263 0174 82BB      		out 50-32,r24
+ 264               	.LBB66:
+ 265               	.LBB67:
+ 266               	.LBB68:
+ 267               	.LBB69:
+ 268               	.LM43:
+ 269 0176 24E0      		ldi r18,lo8(4)
+ 270 0178 F22E      		mov r15,r18
+ 271 017a 8F2D      		mov r24,r15
+ 272               	.LVL9:
+ 273               	/* #APP */
+ 274               	 ;  83 "c:/program files (x86)/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 275 017c 8A95      		1: dec r24
+ 276 017e 01F4      		brne 1b
+ 277               	 ;  0 "" 2
+ 278               	/* #NOAPP */
+ 279               	.LBE69:
+ 280               	.LBE68:
+ 281               	.LBE67:
+ 282               	.LBE66:
+ 283               	.LM44:
+ 284 0180 67E0      		ldi r22,lo8(7)
+ 285 0182 70E0      		ldi r23,hi8(7)
+ 286 0184 601B      		sub r22,r16
+ 287 0186 710B      		sbc r23,r17
+ 288 0188 8FEF      		ldi r24,lo8(255)
+ 289 018a 90E0      		ldi r25,hi8(255)
+ 290               	.LVL10:
+ 291 018c 0E94 0000 		call clearBit
+ 292 0190 88BB      		out 56-32,r24
+ 293               	.LM45:
+ 294 0192 80E0      		ldi r24,lo8(0)
+ 295 0194 90E0      		ldi r25,hi8(0)
+ 296 0196 67E0      		ldi r22,lo8(7)
+ 297 0198 70E0      		ldi r23,hi8(7)
+ 298 019a 0E94 0000 		call setBit
+ 299 019e 82BB      		out 50-32,r24
+ 300               	.LBB70:
+ 301               	.LBB71:
+ 302               	.LBB72:
+ 303               	.LBB73:
+ 304               	.LM46:
+ 305               	/* #APP */
+ 306               	 ;  83 "c:/program files (x86)/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 307 01a0 FA94      		1: dec r15
+ 308 01a2 01F4      		brne 1b
+ 309               	 ;  0 "" 2
+ 310               	.LVL11:
+ 311               	/* #NOAPP */
+ 312               	.LBE73:
+ 313               	.LBE72:
+ 314               	.LBE71:
+ 315               	.LBE70:
+ 316               	.LM47:
+ 317 01a4 12BA      		out 50-32,__zero_reg__
+ 318               	/* epilogue start */
+ 319               	.LM48:
+ 320 01a6 1F91      		pop r17
+ 321 01a8 0F91      		pop r16
+ 322               	.LVL12:
+ 323 01aa FF90      		pop r15
+ 324               	.LVL13:
+ 325 01ac 0895      		ret
+ 326               	.LFE9:
+ 328               	.global	vykresleniCisel
+ 330               	vykresleniCisel:
+ 331               	.LFB11:
+ 332               	.LM49:
+ 333 01ae EF92      		push r14
+ 334 01b0 FF92      		push r15
+ 335 01b2 0F93      		push r16
+ 336 01b4 1F93      		push r17
+ 337 01b6 CF93      		push r28
+ 338 01b8 DF93      		push r29
+ 339               	/* prologue: function */
+ 340               	/* frame size = 0 */
+ 341               	.LM50:
+ 342 01ba 00E0      		ldi r16,lo8(0)
+ 343 01bc 10E0      		ldi r17,hi8(0)
+ 344               	.LVL14:
+ 345               	.LBB74:
+ 346               	.LBB75:
+ 347               	.LBB76:
+ 348               	.LBB77:
+ 349               	.LBB78:
+ 350               	.LBB79:
+ 351               	.LM51:
+ 352 01be E12C      		mov r14,__zero_reg__
+ 353 01c0 34E2      		ldi r19,hi8(9216)
+ 354 01c2 F32E      		mov r15,r19
+ 355 01c4 00C0      		rjmp .L19
+ 356               	.LVL15:
+ 357               	.L20:
+ 358               	.LBE79:
+ 359               	.LBE78:
+ 360               	.LBE77:
+ 361               	.LBE76:
+ 362               	.LM52:
+ 363 01c6 8091 0000 		lds r24,cisloRegistr1
+ 364 01ca 9091 0000 		lds r25,(cisloRegistr1)+1
+ 365               	.LVL16:
+ 366 01ce BE01      		movw r22,r28
+ 367 01d0 40E0      		ldi r20,lo8(0)
+ 368 01d2 50E0      		ldi r21,hi8(0)
+ 369 01d4 0E94 0000 		call zapsaniDat
+ 370               	.LM53:
+ 371 01d8 8091 0000 		lds r24,cisloRegistr2
+ 372 01dc 9091 0000 		lds r25,(cisloRegistr2)+1
+ 373 01e0 BE01      		movw r22,r28
+ 374 01e2 41E0      		ldi r20,lo8(1)
+ 375 01e4 50E0      		ldi r21,hi8(1)
+ 376 01e6 0E94 0000 		call zapsaniDat
+ 377               	.LM54:
+ 378 01ea 8091 0000 		lds r24,cisloRegistr3
+ 379 01ee 9091 0000 		lds r25,(cisloRegistr3)+1
+ 380 01f2 BE01      		movw r22,r28
+ 381 01f4 42E0      		ldi r20,lo8(2)
+ 382 01f6 50E0      		ldi r21,hi8(2)
+ 383 01f8 0E94 0000 		call zapsaniDat
+ 384               	.LM55:
+ 385 01fc 8091 0000 		lds r24,cisloRegistr4
+ 386 0200 9091 0000 		lds r25,(cisloRegistr4)+1
+ 387 0204 BE01      		movw r22,r28
+ 388 0206 43E0      		ldi r20,lo8(3)
+ 389 0208 50E0      		ldi r21,hi8(3)
+ 390 020a 0E94 0000 		call zapsaniDat
+ 391               	.LM56:
+ 392 020e 8091 0000 		lds r24,cisloRegistr5
+ 393 0212 9091 0000 		lds r25,(cisloRegistr5)+1
+ 394 0216 BE01      		movw r22,r28
+ 395 0218 44E0      		ldi r20,lo8(4)
+ 396 021a 50E0      		ldi r21,hi8(4)
+ 397 021c 0E94 0000 		call zapsaniDat
+ 398               	.LM57:
+ 399 0220 8091 0000 		lds r24,cisloRegistr6
+ 400 0224 9091 0000 		lds r25,(cisloRegistr6)+1
+ 401 0228 BE01      		movw r22,r28
+ 402 022a 45E0      		ldi r20,lo8(5)
+ 403 022c 50E0      		ldi r21,hi8(5)
+ 404 022e 0E94 0000 		call zapsaniDat
+ 405               	.LM58:
+ 406 0232 CE01      		movw r24,r28
+ 407 0234 0E94 0000 		call vykresleniSloupce
+ 408               	.LBB83:
+ 409               	.LBB82:
+ 410               	.LBB81:
+ 411               	.LBB80:
+ 412               	.LM59:
+ 413 0238 C701      		movw r24,r14
+ 414               	.LVL17:
+ 415               	/* #APP */
+ 416               	 ;  105 "c:/program files (x86)/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 417 023a 0197      		1: sbiw r24,1
+ 418 023c 01F4      		brne 1b
+ 419               	 ;  0 "" 2
+ 420               	/* #NOAPP */
+ 421               	.LBE80:
+ 422               	.LBE81:
+ 423               	.LBE82:
+ 424               	.LBE83:
+ 425               	.LM60:
+ 426 023e 2196      		adiw r28,1
+ 427 0240 C830      		cpi r28,8
+ 428 0242 D105      		cpc r29,__zero_reg__
+ 429 0244 01F0      		breq .+2
+ 430 0246 00C0      		rjmp .L20
+ 431               	.LBE75:
+ 432               	.LM61:
+ 433 0248 0F5F      		subi r16,lo8(-(1))
+ 434 024a 1F4F      		sbci r17,hi8(-(1))
+ 435 024c 0D39      		cpi r16,157
+ 436 024e 1105      		cpc r17,__zero_reg__
+ 437 0250 01F0      		breq .L22
+ 438               	.L19:
+ 439 0252 C0E0      		ldi r28,lo8(0)
+ 440 0254 D0E0      		ldi r29,hi8(0)
+ 441 0256 00C0      		rjmp .L20
+ 442               	.L22:
+ 443               	/* epilogue start */
+ 444               	.LBE74:
+ 445               	.LM62:
+ 446 0258 DF91      		pop r29
+ 447 025a CF91      		pop r28
+ 448               	.LVL18:
+ 449 025c 1F91      		pop r17
+ 450 025e 0F91      		pop r16
+ 451               	.LVL19:
+ 452 0260 FF90      		pop r15
+ 453 0262 EF90      		pop r14
+ 454 0264 0895      		ret
+ 455               	.LFE11:
+ 457               	.global	main
+ 459               	main:
+ 460               	.LFB12:
+ 461               	.LM63:
+ 462               	/* prologue: function */
+ 463               	/* frame size = 0 */
+ 464               	.LM64:
+ 465 0266 0E94 0000 		call setup
+ 466               	.L25:
+ 467               	.LM65:
+ 468 026a 0E94 0000 		call vykresleniCisel
+ 469               	.LM66:
+ 470 026e 0E94 0000 		call pocitaniCasu
+ 471 0272 00C0      		rjmp .L25
+ 472               	.LFE12:
+ 474               	.global	cisla
+ 475               		.data
+ 478               	cisla:
+ 479 0000 0000      		.word	0
+ 480 0002 7C00      		.word	124
+ 481 0004 FE00      		.word	254
+ 482 0006 9200      		.word	146
+ 483 0008 A200      		.word	162
+ 484 000a FE00      		.word	254
+ 485 000c 7C00      		.word	124
+ 486 000e 0000      		.word	0
+ 487 0010 0000      		.word	0
+ 488 0012 0200      		.word	2
+ 489 0014 2200      		.word	34
+ 490 0016 FE00      		.word	254
+ 491 0018 FE00      		.word	254
+ 492 001a 0200      		.word	2
+ 493 001c 0200      		.word	2
+ 494 001e 0000      		.word	0
+ 495 0020 0000      		.word	0
+ 496 0022 4600      		.word	70
+ 497 0024 CE00      		.word	206
+ 498 0026 8A00      		.word	138
+ 499 0028 9200      		.word	146
+ 500 002a F200      		.word	242
+ 501 002c 6200      		.word	98
+ 502 002e 0000      		.word	0
+ 503 0030 0000      		.word	0
+ 504 0032 4400      		.word	68
+ 505 0034 C600      		.word	198
+ 506 0036 9200      		.word	146
+ 507 0038 9200      		.word	146
+ 508 003a FE00      		.word	254
+ 509 003c 6C00      		.word	108
+ 510 003e 0000      		.word	0
+ 511 0040 0000      		.word	0
+ 512 0042 1800      		.word	24
+ 513 0044 1800      		.word	24
+ 514 0046 2800      		.word	40
+ 515 0048 6800      		.word	104
+ 516 004a FE00      		.word	254
+ 517 004c FE00      		.word	254
+ 518 004e 0000      		.word	0
+ 519 0050 0000      		.word	0
+ 520 0052 E400      		.word	228
+ 521 0054 E600      		.word	230
+ 522 0056 A200      		.word	162
+ 523 0058 A200      		.word	162
+ 524 005a BE00      		.word	190
+ 525 005c 9C00      		.word	156
+ 526 005e 0000      		.word	0
+ 527 0060 0000      		.word	0
+ 528 0062 7C00      		.word	124
+ 529 0064 FE00      		.word	254
+ 530 0066 9200      		.word	146
+ 531 0068 9200      		.word	146
+ 532 006a DE00      		.word	222
+ 533 006c 4C00      		.word	76
+ 534 006e 0000      		.word	0
+ 535 0070 0000      		.word	0
+ 536 0072 C000      		.word	192
+ 537 0074 C000      		.word	192
+ 538 0076 9E00      		.word	158
+ 539 0078 BE00      		.word	190
+ 540 007a E000      		.word	224
+ 541 007c C000      		.word	192
+ 542 007e 0000      		.word	0
+ 543 0080 0000      		.word	0
+ 544 0082 6C00      		.word	108
+ 545 0084 FE00      		.word	254
+ 546 0086 9200      		.word	146
+ 547 0088 9200      		.word	146
+ 548 008a FE00      		.word	254
+ 549 008c 6C00      		.word	108
+ 550 008e 0000      		.word	0
+ 551 0090 0000      		.word	0
+ 552 0092 6400      		.word	100
+ 553 0094 F600      		.word	246
+ 554 0096 9200      		.word	146
+ 555 0098 9200      		.word	146
+ 556 009a FE00      		.word	254
+ 557 009c 7C00      		.word	124
+ 558 009e 0000      		.word	0
+ 559               	.global	cisloRegistr1
+ 562               	cisloRegistr1:
+ 563 00a0 0100      		.word	1
+ 564               	.global	cisloRegistr2
+ 567               	cisloRegistr2:
+ 568 00a2 0200      		.word	2
+ 569               	.global	cisloRegistr3
+ 572               	cisloRegistr3:
+ 573 00a4 0300      		.word	3
+ 574               	.global	cisloRegistr4
+ 575               	.global	cisloRegistr4
+ 576               		.section .bss
+ 579               	cisloRegistr4:
+ 580 0000 0000      		.skip 2,0
+ 581               	.global	cisloRegistr5
+ 582               		.data
+ 585               	cisloRegistr5:
+ 586 00a6 0400      		.word	4
+ 587               	.global	cisloRegistr6
+ 588               	.global	cisloRegistr6
+ 589               		.section .bss
+ 592               	cisloRegistr6:
+ 593 0002 0000      		.skip 2,0
+ 658               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:2      *ABS*:0000003f __SREG__
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:3      *ABS*:0000003e __SP_H__
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:4      *ABS*:0000003d __SP_L__
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:5      *ABS*:00000034 __CCP__
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:18     .text:00000000 setup
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:66     .text:0000001e pocitaniCasu
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:592    .bss:00000002 cisloRegistr6
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:585    .data:000000a6 cisloRegistr5
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:579    .bss:00000000 cisloRegistr4
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:572    .data:000000a4 cisloRegistr3
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:567    .data:000000a2 cisloRegistr2
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:562    .data:000000a0 cisloRegistr1
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:177    .text:0000011c zapsaniDat
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:478    .data:00000000 cisla
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:243    .text:0000015c vykresleniSloupce
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:330    .text:000001ae vykresleniCisel
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc20R3JU.s:459    .text:00000266 main
+
+UNDEFINED SYMBOLS
+setBit
+clearBit
+__do_copy_data
+__do_clear_bss

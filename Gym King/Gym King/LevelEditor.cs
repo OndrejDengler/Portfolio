@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Gym_King
 {
@@ -54,8 +55,6 @@ namespace Gym_King
            }
            if(Confirm)
            {
-                //Pridat do souboru
-               //spriteBatch.Draw(GymKing.BlankTexture, GetRectangle(), Color.Green);
                 Add();
                 levelScene.Reload();
                 Confirm = false;
@@ -75,9 +74,9 @@ namespace Gym_King
                     sw.Close();
                 }
             }
-            catch
+            catch(IOException ex)
             {
-                // Nakej hezkej catch
+                MessageBox.Show(ex.Message);
             }
         }
 

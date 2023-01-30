@@ -1,0 +1,141 @@
+   1               		.file	"bitFunkce.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	setBit
+  18               	setBit:
+  19               	.LFB2:
+  20               	.LM1:
+  21               	.LVL0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	.LM2:
+  25 0000 21E0      		ldi r18,lo8(1)
+  26 0002 30E0      		ldi r19,hi8(1)
+  27 0004 00C0      		rjmp 2f
+  28 0006 220F      	1:	lsl r18
+  29 0008 331F      		rol r19
+  30 000a 6A95      	2:	dec r22
+  31 000c 02F4      		brpl 1b
+  32 000e 282B      		or r18,r24
+  33 0010 392B      		or r19,r25
+  34               	.LM3:
+  35 0012 C901      		movw r24,r18
+  36               	.LVL1:
+  37               	/* epilogue start */
+  38 0014 0895      		ret
+  39               	.LFE2:
+  41               	.global	clearBit
+  43               	clearBit:
+  44               	.LFB3:
+  45               	.LM4:
+  46               	.LVL2:
+  47               	/* prologue: function */
+  48               	/* frame size = 0 */
+  49               	.LM5:
+  50 0016 21E0      		ldi r18,lo8(1)
+  51 0018 30E0      		ldi r19,hi8(1)
+  52 001a 00C0      		rjmp 2f
+  53 001c 220F      	1:	lsl r18
+  54 001e 331F      		rol r19
+  55 0020 6A95      	2:	dec r22
+  56 0022 02F4      		brpl 1b
+  57 0024 2095      		com r18
+  58 0026 3095      		com r19
+  59 0028 2823      		and r18,r24
+  60 002a 3923      		and r19,r25
+  61               	.LM6:
+  62 002c C901      		movw r24,r18
+  63               	.LVL3:
+  64               	/* epilogue start */
+  65 002e 0895      		ret
+  66               	.LFE3:
+  68               	.global	toggleBit
+  70               	toggleBit:
+  71               	.LFB4:
+  72               	.LM7:
+  73               	.LVL4:
+  74               	/* prologue: function */
+  75               	/* frame size = 0 */
+  76               	.LM8:
+  77 0030 21E0      		ldi r18,lo8(1)
+  78 0032 30E0      		ldi r19,hi8(1)
+  79 0034 00C0      		rjmp 2f
+  80 0036 220F      	1:	lsl r18
+  81 0038 331F      		rol r19
+  82 003a 6A95      	2:	dec r22
+  83 003c 02F4      		brpl 1b
+  84 003e 2827      		eor r18,r24
+  85 0040 3927      		eor r19,r25
+  86               	.LM9:
+  87 0042 C901      		movw r24,r18
+  88               	.LVL5:
+  89               	/* epilogue start */
+  90 0044 0895      		ret
+  91               	.LFE4:
+  93               	.global	bitIsSet
+  95               	bitIsSet:
+  96               	.LFB5:
+  97               	.LM10:
+  98               	.LVL6:
+  99               	/* prologue: function */
+ 100               	/* frame size = 0 */
+ 101               	.LM11:
+ 102 0046 9C01      		movw r18,r24
+ 103 0048 00C0      		rjmp 2f
+ 104 004a 3595      	1:	asr r19
+ 105 004c 2795      		ror r18
+ 106 004e 6A95      	2:	dec r22
+ 107 0050 02F4      		brpl 1b
+ 108 0052 2170      		andi r18,lo8(1)
+ 109 0054 3070      		andi r19,hi8(1)
+ 110               	.LM12:
+ 111 0056 C901      		movw r24,r18
+ 112               	.LVL7:
+ 113               	/* epilogue start */
+ 114 0058 0895      		ret
+ 115               	.LFE5:
+ 117               	.global	bitIsClear
+ 119               	bitIsClear:
+ 120               	.LFB6:
+ 121               	.LM13:
+ 122               	.LVL8:
+ 123               	/* prologue: function */
+ 124               	/* frame size = 0 */
+ 125               	.LM14:
+ 126 005a 9C01      		movw r18,r24
+ 127 005c 00C0      		rjmp 2f
+ 128 005e 3595      	1:	asr r19
+ 129 0060 2795      		ror r18
+ 130 0062 6A95      	2:	dec r22
+ 131 0064 02F4      		brpl 1b
+ 132 0066 2095      		com r18
+ 133 0068 3095      		com r19
+ 134 006a 2170      		andi r18,lo8(1)
+ 135 006c 3070      		andi r19,hi8(1)
+ 136               	.LM15:
+ 137 006e C901      		movw r24,r18
+ 138               	.LVL9:
+ 139               	/* epilogue start */
+ 140 0070 0895      		ret
+ 141               	.LFE6:
+ 199               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 bitFunkce.c
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc4flj9G.s:2      *ABS*:0000003f __SREG__
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc4flj9G.s:3      *ABS*:0000003e __SP_H__
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc4flj9G.s:4      *ABS*:0000003d __SP_L__
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc4flj9G.s:5      *ABS*:00000034 __CCP__
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc4flj9G.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc4flj9G.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc4flj9G.s:18     .text:00000000 setBit
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc4flj9G.s:43     .text:00000016 clearBit
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc4flj9G.s:70     .text:00000030 toggleBit
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc4flj9G.s:95     .text:00000046 bitIsSet
+C:\Users\DENGLE~1.OND\AppData\Local\Temp/cc4flj9G.s:119    .text:0000005a bitIsClear
+
+NO UNDEFINED SYMBOLS

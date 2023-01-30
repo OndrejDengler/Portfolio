@@ -1,0 +1,2 @@
+Small project in which I practiced working with LED matrix periphery using language C with microcontroller Atmega128.
+The task was to make a program that shows precise time(not current) on LED matrix pannel.
