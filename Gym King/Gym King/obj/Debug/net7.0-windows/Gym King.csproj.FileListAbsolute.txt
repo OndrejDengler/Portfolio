@@ -56,3 +56,32 @@ C:\Users\dengy\Documents\Portfolio\Gym King\obj\Debug\net7.0-windows\refint\Gym 
 C:\Users\dengy\Documents\Portfolio\Gym King\obj\Debug\net7.0-windows\Gym King.pdb
 C:\Users\dengy\Documents\Portfolio\Gym King\obj\Debug\net7.0-windows\Gym King.genruntimeconfig.cache
 C:\Users\dengy\Documents\Portfolio\Gym King\obj\Debug\net7.0-windows\ref\Gym King.dll
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\Gym King.exe
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\Gym King.deps.json
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\Gym King.runtimeconfig.json
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\Gym King.dll
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\Gym King.pdb
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\Cyotek.Drawing.BitmapFont.dll
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\MonoGame.Framework.dll
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\SpriteFontPlus.dll
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\StbImageSharp.dll
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\StbTrueTypeSharp.dll
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\runtimes\osx\native\libSDL2.dylib
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\runtimes\osx\native\libopenal.1.dylib
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\runtimes\win-x64\native\SDL2.dll
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\runtimes\win-x64\native\soft_oal.dll
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\runtimes\win-x86\native\SDL2.dll
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\bin\Debug\net7.0-windows\runtimes\win-x86\native\soft_oal.dll
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\obj\Debug\net7.0-windows\Gym King.csproj.AssemblyReference.cache
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\obj\Debug\net7.0-windows\Gym King.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\obj\Debug\net7.0-windows\Gym King.AssemblyInfoInputs.cache
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\obj\Debug\net7.0-windows\Gym King.AssemblyInfo.cs
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\obj\Debug\net7.0-windows\Gym King.csproj.CoreCompileInputs.cache
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\obj\Debug\net7.0-windows\Gym King.csproj.CopyComplete
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\obj\Debug\net7.0-windows\Gym King.dll
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\obj\Debug\net7.0-windows\refint\Gym King.dll
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\obj\Debug\net7.0-windows\Gym King.pdb
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\obj\Debug\net7.0-windows\Gym King.genruntimeconfig.cache
+C:\Users\dengy\Documents\Portfolio\Gym King\Gym King\obj\Debug\net7.0-windows\ref\Gym King.dll

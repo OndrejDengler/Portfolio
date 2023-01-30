@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1DfhR9V7tttPyW5lOhXaF1cMWCqVWwPVMY02Gnzh1ySpmvJWhWo/cZFsNuKy6Vx5PsgwMY3ga8Lj+EAwF2Gdag==",
+  "dgSpecHash": "gmlWOfJ3u3xMxRKYitIQ1km9dMyCuUkXFycP6uGkHgNYh+Oz5jbfDgg/JAeHz1jM8VAnn5pHv/kQkEY6ftsGSQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dengy\\Documents\\Portfolio\\Gym King\\Gym King.csproj",
+  "projectFilePath": "C:\\Users\\dengy\\Documents\\Portfolio\\Gym King\\Gym King\\Gym King.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dengy\\.nuget\\packages\\cyotek.drawing.bitmapfont\\2.0.1\\cyotek.drawing.bitmapfont.2.0.1.nupkg.sha512",
     "C:\\Users\\dengy\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dengy\\Documents\\Portfolio\\Gym King\\Gym King.csproj": {}
+    "C:\\Users\\dengy\\Documents\\Portfolio\\Gym King\\Gym King\\Gym King.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dengy\\Documents\\Portfolio\\Gym King\\Gym King.csproj": {
+    "C:\\Users\\dengy\\Documents\\Portfolio\\Gym King\\Gym King\\Gym King.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dengy\\Documents\\Portfolio\\Gym King\\Gym King.csproj",
+        "projectUniqueName": "C:\\Users\\dengy\\Documents\\Portfolio\\Gym King\\Gym King\\Gym King.csproj",
         "projectName": "Gym King",
-        "projectPath": "C:\\Users\\dengy\\Documents\\Portfolio\\Gym King\\Gym King.csproj",
+        "projectPath": "C:\\Users\\dengy\\Documents\\Portfolio\\Gym King\\Gym King\\Gym King.csproj",
         "packagesPath": "C:\\Users\\dengy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dengy\\Documents\\Portfolio\\Gym King\\obj\\",
+        "outputPath": "C:\\Users\\dengy\\Documents\\Portfolio\\Gym King\\Gym King\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dengy\\AppData\\Roaming\\NuGet\\NuGet.Config",
